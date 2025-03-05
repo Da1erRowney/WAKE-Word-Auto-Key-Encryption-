@@ -1,29 +1,53 @@
-The code implements the WAKE encryption algorithm based on a bitwise exclusive OR (XOR) operation.
+# 🔐 WAKE Encryption Algorithm Implementation
 
-Form Interface: This code is written for a Windows Forms application. The form has several text fields (textBox1, textBox2, textBox3, textBox4, textBox5, textBox6, textBox7) for entering text and key, buttons for performing encryption and decryption operations, and a dataGridView1 control for displaying the results.
+This code implements the **WAKE** encryption algorithm based on a bitwise exclusive OR (XOR) operation in a Windows Forms application.
 
-Encryption:
-The user enters the plaintext (textBox6) and the key (textBox5).
-The plaintext and key are converted to ASCII numeric sequences using the GetHexNumericSequence method.
-Each plaintext character is then encrypted by bitwise XOR with the corresponding key character.
-The ciphertext is displayed in textBox2, and the calculation results (ASCII character codes, ASCII key codes, ASCII encrypted character codes) are displayed in dataGridView1.
+## 🖥️ Form Interface
 
-Decryption:
-The user enters the ciphertext (textBox2) and the key (textBox5).
-The ciphertext and key are also converted into numeric sequences of ASCII codes.
-Each ciphertext character is decrypted by bitwise XOR with the corresponding key character.
-The decrypted text is displayed in textBox3.
+The application features a user-friendly interface with the following components:
 
-GetHexNumericSequence method:
-This method converts a string into a numeric sequence of ASCII codes. It simply loops through the characters in a string and converts them into numeric values represented in hexadecimal.
-Encryption type:
+- **Text Fields**:
+  - `textBox1`: (Unused)
+  - `textBox2`: Displays the ciphertext.
+  - `textBox3`: Displays the decrypted text.
+  - `textBox4`: (Unused)
+  - `textBox5`: Input for the encryption key.
+  - `textBox6`: Input for plaintext.
+  - `textBox7`: (Unused)
 
-In this case, WAKE-based encryption is used.
-During the encryption process, each plaintext character is XOR'd with the corresponding key character. This results in the ciphertext being obtained.
-During decryption, the same operation occurs: each character in the ciphertext is XORed with a character in the key to recover the original plaintext.
-Thus, this code implements a simple WAKE-based encryption and decryption algorithm that can be used to protect data from unauthorized access.
+- **Buttons**:
+  - Button for performing encryption.
+  - Button for performing decryption.
 
-URL - https://ru.wikipedia.org/wiki/WAKE
+- **Data Grid View**:
+  - `dataGridView1`: Displays results including ASCII character codes, ASCII key codes, and ASCII encrypted character codes.
 
-Example of work:
-![image](https://github.com/Da1erRowney/WAKE-Word-Auto-Key-Encryption-/assets/126601293/cd3b6a3c-de3a-465a-8b4c-67b5e59ac26c)
+## 🔒 Encryption Process
+
+1. **User Input**: The user enters the plaintext in `textBox6` and the key in `textBox5`.
+2. **Conversion**: The plaintext and key are converted to ASCII numeric sequences using the `GetHexNumericSequence` method.
+3. **Encryption**: Each plaintext character is XOR'd with the corresponding key character to produce the ciphertext.
+4. **Display**: The ciphertext is displayed in `textBox2`, and the calculation results are shown in `dataGridView1`.
+
+## 🔓 Decryption Process
+
+1. **User Input**: The user enters the ciphertext in `textBox2` and the key in `textBox5`.
+2. **Conversion**: The ciphertext and key are converted into numeric sequences of ASCII codes.
+3. **Decryption**: Each character in the ciphertext is XOR'd with the corresponding key character to recover the original plaintext.
+4. **Display**: The decrypted text is displayed in `textBox3`.
+
+## 🔢 GetHexNumericSequence Method
+
+This method converts a string into a numeric sequence of ASCII codes. It loops through each character in the string and converts them into their corresponding numeric values in hexadecimal format.
+
+## 🔍 Example of Work
+
+Here’s an example of the application's output:
+
+<div align="center">
+  <img src="https://github.com/Da1erRowney/WAKE-Word-Auto-Key-Encryption-/assets/126601293/cd3b6a3c-de3a-465a-8b4c-67b5e59ac26c" alt="Example of Work" width="500"/>
+</div>
+
+## 📚 Conclusion
+
+This code implements a simple WAKE-based encryption and decryption algorithm that can be used to protect data from unauthorized access. The straightforward approach ensures ease of use while maintaining data security.
